@@ -6,7 +6,7 @@ const verifyToken = require('./verifyToken.js')
 
 router.route('/Cars').get(getCars)
 router.route('/Car/:id').get(getCar)
-router.route('/addCar').post(verifyToken, addCar)
+router.route('/addCar').post( addCar)
 router.route('/update/:idCar').patch(verifyToken, updateCar)
 router.route('/delete/:idCar').delete(verifyToken, deleteCar)
 

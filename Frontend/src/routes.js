@@ -1,11 +1,11 @@
 import Dashboard from "views/Dashboard.js";
 import UserProfile from "views/UserProfile.js";
-import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import Icons from "views/Icons.js";
 import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
+import CarsList from "views/Cars/CarsList.js";
 
 const dashboardRoutes = [
   {
@@ -23,18 +23,12 @@ const dashboardRoutes = [
     component: Dashboard,
     layout: "/admin"
   },
+
   {
-    path: "/user",
-    name: "User Profile",
-    icon: "nc-icon nc-circle-09",
-    component: UserProfile,
-    layout: "/admin"
-  },
-  {
-    path: "/table",
+    path: "/List",
     name: "Cars List",
     icon: "nc-icon nc-notes",
-    component: TableList,
+    component: CarsList,
     layout: "/admin"
   },
   {
@@ -46,7 +40,7 @@ const dashboardRoutes = [
   },
   {
     path: "/icons",
-    name: "Electrics",
+    name: "Electrical cars",
     icon: "nc-icon nc-atom",
     component: Icons,
     layout: "/admin"
@@ -56,6 +50,13 @@ const dashboardRoutes = [
     name: "Stores",
     icon: "nc-icon nc-pin-3",
     component: Maps,
+    layout: "/admin"
+  },
+  {
+    path: "/user",
+    name: "User Profile",
+    icon: "nc-icon nc-circle-09",
+    component: UserProfile,
     layout: "/admin"
   },
   {
